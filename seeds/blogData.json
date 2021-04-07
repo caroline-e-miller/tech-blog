@@ -1,0 +1,17 @@
+[
+    {
+        "name": "How to handle your first days of JavaScript",
+        "description": "A guide to maintaining your sanity and growing your confidence.",
+        "body": "The first rule is: keep going. Second rule: accept frustration as normal. Third rule: celebrate the little breakthroughs."
+    },
+    {
+        "name": "My first interview is tomorrow. Ack!",
+        "description": "How to put your best foot forward, even among the nerves and uncertainty.",
+        "body": "Sleep a lot the night before. Breathe during the interview. Be nice to people."
+    },
+    {
+        "name": "When is it too late to learn coding?",
+        "description": "We've all heard that sometimes it's too late to turn the car around. When is that?",
+        "body": "Never! Don't be silly."
+    }
+]
