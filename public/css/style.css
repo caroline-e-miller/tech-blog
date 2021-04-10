@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(97, 238, 184);
+    background-image: url("https://images.app.goo.gl/L3YfC7gT1YT4BpnR7.jpg")
+}
+
+.container {
+    margin: 50px;
+    margin-top: 50px
+}
+
+.card {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px
+}
+
+#header, h1, h2, h3, p {
+    font-family: Arial, Helvetica, sans-serif;
+}
