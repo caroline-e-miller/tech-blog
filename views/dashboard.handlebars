@@ -40,6 +40,23 @@
         {{/each}}
     </div>
     {{/if}}
+
+    {{#if comments.length}}
+    <div class="col-md-6 comment-list">
+        <h1>Comments</h1>
+
+        {{#each comments as |comment|}}
+        <div class="row mb-2">
+            <div class="card">
+                <p><a href="/comment/{{comment.id}}">{{comment.comment_bodt}}</a></p>
+            </div>
+            <div class="card">
+                <button class="btn btn-sm btn-danger" data-id="{{comment.id}}">Delete comment</button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
 </div>
 
 <script src="./js/dashboard.js"></script>
