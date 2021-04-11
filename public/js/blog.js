@@ -29,7 +29,7 @@ const deleteComment = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/blog');
+            document.location.replace('/blogs');
         } else {
             alert('Failed to erase comment.');
         }

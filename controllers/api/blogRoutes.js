@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
             include: [{ model: Comment }, { model: User }]
         });
         res.status(200).json(blogData);
+
     } catch (error) {
         res.status(500).json(error);
     }
@@ -45,6 +46,20 @@ router.delete('/:id', withAuth, async (req, res) => {
         res.status(200).json(blogData);
     } catch (err) {
         res.status(500).json(err);
+    }
+});
+
+// update a blog post
+router.put('/:id', async (req, res) => {
+    try {
+        const blogData = await Blog.update(req.body, {
+            where: {
+                id: req.params.id,
+            },
+        });
+        res.status(200).json(blogData);
+    } catch (err) {
+        res.status(400).json(err);
     }
 });
 
