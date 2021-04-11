@@ -32,9 +32,7 @@
                 <h4><a href="/blog/{{blog.id}}">{{blog.title}}</a></h4>
                 <p><a href="/blog/{{blog.post_body}}"></a></p>
             </div>
-            <div class="card">
-                <button class="btn btn-sm btn-danger" blog-data-id="{{blog.id}}">Erase</button>
-            </div>
+            <button class="btn btn-sm btn-danger" blog-data-id="{{blog.id}}">Erase</button>
         </div>
         {{/each}}
         {{/if}}
@@ -47,7 +45,7 @@
         {{#each comments as |comment|}}
         <div class="row mb-2">
             <div class="card">
-                <p><a href="/comment/{{comment.id}}">{{comment.comment_bodt}}</a></p>
+                <p><a href="/comment/{{comment.id}}">{{comment.comment_body}}</a></p>
             </div>
             <div class="card">
                 <button class="btn btn-sm btn-danger" comment-data-id="{{comment.id}}">Delete comment</button>

@@ -21,11 +21,11 @@
             <div class="card">
                 <p><a href="/comment/{{comment.id}}">{{comment.comment_body}}</a></p>
             </div>
-            <div class="card">
-                <button class="btn btn-sm btn-danger" comment-data-id="{{comment.id}}">Delete comment</button>
-            </div>
+            <button class="btn btn-sm btn-danger" comment-data-id="{{comment.id}}">Delete comment</button>
         </div>
         {{/each}}
         {{/if}}
     </div>
 </div>
+
+<script src="./js/blog.js"></script>
