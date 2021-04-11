@@ -19,8 +19,8 @@
             </h1>
             <nav>
                 {{#if logged_in}}
-                <a href="/dashboard">Dashboard</a> |
-                <button class="no-button" id="logout">Logout</button>
+                <button type="button" class="btn btn-light" id="dashboard"><a href="/dashboard">Dashboard</a></button> |
+                <button type="button" class="btn btn-light" id="logout">Logout</button>
                 {{else}}
                 <a href="/login">Login/Sign up</a>
                 {{/if}}

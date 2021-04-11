@@ -79,13 +79,13 @@ document
     .querySelector('.new-blog-form')
     .addEventListener('submit', newBlog);
 
-document
-    .querySelector('.new-comment-form')
-    .addEventListener('click', newComment);
+// document
+//     .querySelector('.new-comment-form')
+//     .addEventListener('click', newComment);
 
-document
-    .querySelector('.comment-list')
-    .addEventListener('click', deleteComment);
+// document
+//     .querySelector('.comment-list')
+//     .addEventListener('click', deleteComment);
 
 document
     .querySelector('.blog-list')

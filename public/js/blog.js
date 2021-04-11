@@ -35,3 +35,11 @@ const deleteComment = async (event) => {
         }
     }
 };
+
+document
+    .querySelector('.new-comment-form')
+    .addEventListener('click', newComment);
+
+document
+    .querySelector('.comment-list')
+    .addEventListener('click', deleteComment);
