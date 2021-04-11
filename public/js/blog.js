@@ -1,7 +1,7 @@
 const newComment = async (event) => {
     event.preventDefault();
 
-    const comment = document.querySelector('#comment-desc').value.trim();
+    const comment = document.querySelector('#comment-body').value.trim();
 
     if (comment) {
         const response = await fetch(`/api/comments`, {
@@ -13,7 +13,7 @@ const newComment = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/dashboard');
+            document.location.replace('/blog');
         } else {
             alert('Failed to publish comment.');
         }
@@ -29,7 +29,7 @@ const deleteComment = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/dashboard');
+            document.location.replace('/blog');
         } else {
             alert('Failed to erase comment.');
         }
