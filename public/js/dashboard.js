@@ -113,6 +113,6 @@ document
     .querySelector('.blog-list')
     .addEventListener('click', deleteBlog);
 
-document
-    .querySelector('.edit-btn')
-    .addEventListener('click', updateBlog);
+// document
+//     .querySelector('.edit-btn')
+//     .addEventListener('click', updateBlog);

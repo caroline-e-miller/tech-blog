@@ -13,7 +13,7 @@ const newComment = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/blog');
+            document.location.replace(`/blog`);
         } else {
             alert('Failed to publish comment.');
         }
@@ -29,7 +29,7 @@ const deleteComment = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/blogs');
+            document.location.replace('/blog');
         } else {
             alert('Failed to erase comment.');
         }
@@ -38,7 +38,7 @@ const deleteComment = async (event) => {
 
 document
     .querySelector('.new-comment-form')
-    .addEventListener('click', newComment);
+    .addEventListener('submit', newComment);
 
 document
     .querySelector('.comment-list')
