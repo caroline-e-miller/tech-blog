@@ -45,6 +45,6 @@ document
     .querySelector('.login-form')
     .addEventListener('submit', login);
 
-// document
-//     .querySelector('.signup-form')
-//     .addEventListener('submit', signUp);
+document
+    .querySelector('.signup-form')
+    .addEventListener('submit', signUp);
