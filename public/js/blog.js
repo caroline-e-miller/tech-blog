@@ -2,7 +2,8 @@ const newComment = async (event) => {
     event.preventDefault();
 
     const comment = document.querySelector('#comment-body').value.trim();
-    const blogId = event.target.getAttribute('blog-id');
+    const blogId = event.target.getAttribute('.new-comment-form');
+    console.log(event.target);
 
     if (comment) {
         const response = await fetch(`/api/comments`, {
@@ -14,7 +15,9 @@ const newComment = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace(`/blog/${blogId}`);
+            // document.location.replace(`/blog/${blogId}`);
+            console.log(response);
+            console.log(blogId);
         } else {
             alert('Failed to publish comment.');
         }

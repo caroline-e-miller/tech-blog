@@ -18,28 +18,28 @@
                 <textarea class="form-input" id="blog-body" name="blog-body"></textarea>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Publish</button>
+                <button type="submit" class="btn btn-primary" blog-id="{{id}}"">Publish</button>
             </div>
         </form>
     </div>
 
-    <div class="col-md-6 blog-list">
-        <h3>My Blog Posts:</h3>
-        {{#if blogs.length}}
-        {{#each blogs as |blog|}}
-        <div class="row mb-2">
-            <div class="card">
-                <h4><a href="/blog/{{blog.id}}">{{blog.title}}</a></h4>
-                <p><a href="/blog/{{blog.post_body}}"></a></p>
+    <div class=" col-md-6 blog-list">
+                    <h3>My Blog Posts:</h3>
+                    {{#if blogs.length}}
+                    {{#each blogs as |blog|}}
+                    <div class="row mb-2">
+                        <div class="card">
+                            <h4><a href="/blog/{{blog.id}}">{{blog.title}}</a></h4>
+                            <p><a href="/blog/{{blog.post_body}}"></a></p>
+                        </div>
+                        <button class="btn btn-sm btn-danger" blog-data-id="{{blog.id}}">Erase</button>
+                        {{!-- <button class="btn btn-sm btn-info edit-btn" blog-data-id="{{blog.id}}">Edit</button> --}}
+                    </div>
+                    {{/each}}
+                    {{/if}}
             </div>
-            <button class="btn btn-sm btn-danger" blog-data-id="{{blog.id}}">Erase</button>
-            {{!-- <button class="btn btn-sm btn-info edit-btn" blog-data-id="{{blog.id}}">Edit</button> --}}
-        </div>
-        {{/each}}
-        {{/if}}
-    </div>
 
-    {{!-- {{#if comments.length}}
+            {{!-- {{#if comments.length}}
     <div class="col-md-6 comment-list">
         <h1>Comments</h1>
 
@@ -55,6 +55,6 @@
         {{/each}}
     </div>
     {{/if}} --}}
-</div>
+    </div>
 
-<script src="./js/dashboard.js"></script>
+    <script src="./js/dashboard.js"></script>
