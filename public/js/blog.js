@@ -2,18 +2,19 @@ const newComment = async (event) => {
     event.preventDefault();
 
     const comment = document.querySelector('#comment-body').value.trim();
+    const blogId = event.target.getAttribute('blog-id');
 
     if (comment) {
         const response = await fetch(`/api/comments`, {
             method: 'POST',
-            body: JSON.stringify({ comment }),
+            body: JSON.stringify({ comment_body: comment }),
             headers: {
                 'Content-Type': 'application/json',
             },
         });
 
         if (response.ok) {
-            document.location.replace(`/blog`);
+            document.location.replace(`/blog/${blogId}`);
         } else {
             alert('Failed to publish comment.');
         }
