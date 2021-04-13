@@ -2,11 +2,15 @@ const newComment = async (event) => {
     event.preventDefault();
 
     const comment = document.querySelector('#comment-body').value.trim();
-    const blogId = event.target.getAttribute('.new-comment-form');
+    const blogId = event.target.getAttribute('blog-id');
     console.log(event.target);
 
-    if (comment) {
-        const response = await fetch(`/api/comments`, {
+    if (event.target.hasAttribute('blog-id')) {
+        // const id = event.target.getAttribute('form-input');
+
+        // const response = await fetch(`/api/comments/${id}`, {
+
+        const response = await fetch(`/api/comments/`, {
             method: 'POST',
             body: JSON.stringify({ comment_body: comment }),
             headers: {
