@@ -40,10 +40,15 @@ router.get('/blog/:id', async (req, res) => {
                     model: User,
                     attributes: ['name'],
                 },
+                {
+                    model: Comment,
+                    attributes: ['comment_body'],
+                }
             ],
         });
 
         const blog = blogData.get({ plain: true });
+        console.log(blog);
 
         res.render('blog', {
             ...blog,

@@ -12,14 +12,14 @@ const newComment = async (event) => {
 
         const response = await fetch(`/api/comments/`, {
             method: 'POST',
-            body: JSON.stringify({ comment_body: comment }),
+            body: JSON.stringify({ blogId, comment_body: comment }),
             headers: {
                 'Content-Type': 'application/json',
             },
         });
 
         if (response.ok) {
-            // document.location.replace(`/blog/${blogId}`);
+            document.location.replace(`/blog/${blogId}`);
             console.log(response);
             console.log(blogId);
         } else {
