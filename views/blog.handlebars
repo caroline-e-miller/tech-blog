@@ -19,7 +19,7 @@
         {{#each comments as |comment|}}
         <div class="row mb-2">
             <div class="card">
-                <p><a href="/comment/{{comment.id}}">{{comment.comment_body}}</a></p>
+                <p>{{comment.comment_body}}</p>
             </div>
             <button class="btn btn-sm btn-danger" comment-data-id="{{comment.id}}">Delete comment</button>
         </div>
