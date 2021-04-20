@@ -2,7 +2,7 @@
     <h2><input class="form-input" id="input-title" type="text" value="{{title}}"></h2>
     <p><input class="form-input" id="input-body" type="text" value="{{post_body}}"></p>
     <p>Written by {{user.name}} on {{format_date date_created}}</p>
-    <button class="btn btn-info edit-btn" blog-edit-id="{{blog.id}}">Update</button>
+    <button class="btn btn-info edit-btn" blog-edit-id="{{id}}">Update</button>
 
     <form class="form new-comment-form" blog-id="{{id}}">
         <div class="form-group">
