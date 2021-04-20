@@ -23,9 +23,13 @@ const newBlog = async (event) => {
 
 
 // const updateBlog = async (event) => {
+//     event.preventDefault();
 
 //     const title = document.querySelector('#blog-name').value.trim();
 //     const post_body = document.querySelector('#blog-body').value.trim();
+//     const id = event.target.getAttribute('blog-edit-id');
+
+//     console.log(`### ${title} ### ${post_body} ## ${id}`);
 
 //     if (title && post_body) {
 //         // Send the e-mail and password to the server
@@ -43,28 +47,6 @@ const newBlog = async (event) => {
 //     }
 // }
 
-// const newComment = async (event) => {
-//     event.preventDefault();
-
-//     const comment = document.querySelector('#comment-desc').value.trim();
-
-//     if (comment) {
-//         const response = await fetch(`/api/comments`, {
-//             method: 'POST',
-//             body: JSON.stringify({ comment_body }),
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             },
-//         });
-
-//         if (response.ok) {
-//             document.location.replace('/dashboard');
-//         } else {
-//             alert('Failed to publish comment.');
-//         }
-//     }
-// };
-
 const deleteBlog = async (event) => {
     if (event.target.hasAttribute('blog-data-id')) {
         const id = event.target.getAttribute('blog-data-id');
@@ -81,33 +63,9 @@ const deleteBlog = async (event) => {
     }
 };
 
-// const deleteComment = async (event) => {
-//     if (event.target.hasAttribute('comment-data-id')) {
-//         const id = event.target.getAttribute('comment-data-id');
-
-//         const response = await fetch(`/api/comments/${id}`, {
-//             method: 'DELETE',
-//         });
-
-//         if (response.ok) {
-//             document.location.replace('/dashboard');
-//         } else {
-//             alert('Failed to erase comment.');
-//         }
-//     }
-// };
-
 document
     .querySelector('.new-blog-form')
     .addEventListener('submit', newBlog);
-
-// document
-//     .querySelector('.new-comment-form')
-//     .addEventListener('click', newComment);
-
-// document
-//     .querySelector('.comment-list')
-//     .addEventListener('click', deleteComment);
 
 document
     .querySelector('.blog-list')

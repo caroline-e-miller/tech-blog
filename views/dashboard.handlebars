@@ -11,6 +11,19 @@
         <form class="form new-blog-form">
             <div class="form-group">
                 <label for="post-title">Title:</label>
+                <input type="text" class="form-control" id="blog-name" aria-describedby="blogName"
+                    placeholder="Your title">
+            </div>
+            <div class="form-group">
+                <label for="blog-desc">Body:</label>
+                <input type="text" class="form-control" id="blog-body" name="blog-body" placeholder="Body">
+            </div>
+            <button type="submit" class="btn btn-primary" blog-id="{{id}}">Publish</button>
+        </form>
+
+        {{!-- <form class="form new-blog-form">
+            <div class="form-group">
+                <label for="post-title">Title:</label>
                 <input class="form-input" type="text" id="blog-name" name="blog-name" />
             </div>
             <div class="form-group">
@@ -20,7 +33,7 @@
             <div class="form-group">
                 <button type="submit" class="btn btn-primary" blog-id="{{id}}">Publish</button>
             </div>
-        </form>
+        </form> --}}
     </div>
 
     <div class=" col-md-6 blog-list">
@@ -33,7 +46,6 @@
                 <p><a href="/blog/{{blog.post_body}}"></a></p>
             </div>
             <button class="btn btn-sm btn-danger" blog-data-id="{{blog.id}}">Erase</button>
-            {{!-- <button class="btn btn-sm btn-info edit-btn" blog-data-id="{{blog.id}}">Edit</button> --}}
         </div>
         {{/each}}
         {{/if}}
@@ -57,4 +69,4 @@
     {{/if}} --}}
 </div>
 
-<script src="./js/dashboard.js"></script>
+<script src="../js/dashboard.js"></script>

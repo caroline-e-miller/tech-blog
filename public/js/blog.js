@@ -28,26 +28,54 @@ const newComment = async (event) => {
     }
 };
 
-const deleteComment = async (event) => {
-    if (event.target.hasAttribute('comment-data-id')) {
-        const id = event.target.getAttribute('comment-data-id');
+const updateBlog = async (event) => {
+    event.preventDefault();
 
-        const response = await fetch(`/api/comments/${id}`, {
-            method: 'DELETE',
+    const title = document.querySelector('#input-title').value.trim();
+    const post_body = document.querySelector('#input-body').value.trim();
+    const id = event.target.getAttribute('blog-edit-id');
+
+    console.log(`### ${title} ### ${post_body} ## ${id}`);
+
+    if (title && post_body) {
+        // Send the e-mail and password to the server
+        const response = await fetch(`/api/blog/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify({ title, post_body }),
+            headers: { 'Content-Type': 'application/json' },
         });
 
         if (response.ok) {
-            document.location.replace('/blog');
+            document.location.replace(`/blog`);
         } else {
-            alert('Failed to erase comment.');
+            alert('Failed to update the blog.');
         }
     }
-};
+}
+
+// const deleteComment = async (event) => {
+//     if (event.target.hasAttribute('comment-data-id')) {
+//         const id = event.target.getAttribute('comment-data-id');
+
+//         const response = await fetch(`/api/comments/${id}`, {
+//             method: 'DELETE',
+//         });
+
+//         if (response.ok) {
+//             document.location.replace('/blog');
+//         } else {
+//             alert('Failed to erase comment.');
+//         }
+//     }
+// };
 
 document
     .querySelector('.new-comment-form')
     .addEventListener('submit', newComment);
 
 document
-    .querySelector('.comment-list')
-    .addEventListener('click', deleteComment);
+    .querySelector('.edit-btn')
+    .addEventListener('click', updateBlog);
+// document
+//     .querySelector('.comment-list')
+//     .addEventListener('click', deleteComment);

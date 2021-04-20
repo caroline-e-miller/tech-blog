@@ -1,7 +1,8 @@
 <div class="text-center">
-    <h2>{{title}}</h2>
-    <p>{{post_body}}</p>
+    <h2><input class="form-input" id="input-title" type="text" value="{{title}}"></h2>
+    <p><input class="form-input" id="input-body" type="text" value="{{post_body}}"></p>
     <p>Written by {{user.name}} on {{format_date date_created}}</p>
+    <button class="btn btn-info edit-btn" blog-edit-id="{{blog.id}}">Update</button>
 
     <form class="form new-comment-form" blog-id="{{id}}">
         <div class="form-group">
@@ -19,9 +20,14 @@
         {{#each comments as |comment|}}
         <div class="row mb-2">
             <div class="card">
+                {{!-- <p><a href="/comment/{{comment.id}}">{{comment.comment_body}}</a></p> --}}
                 <p>{{comment.comment_body}}</p>
+                {{!-- <p>Comment by {{comment.user_id}} on {{format_date comment.date_created}}</p> --}}
             </div>
-            <button class="btn btn-sm btn-danger" comment-data-id="{{comment.id}}">Delete comment</button>
+            {{!-- <button class="btn btn-sm btn-danger" comment-data-id="{{comment.id}}">Delete comment</button> --}}
+
+            {{!-- update button goes here --}}
+
         </div>
         {{/each}}
         {{/if}}

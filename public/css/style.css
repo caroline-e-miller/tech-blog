@@ -1,10 +1,15 @@
 body {
-    background-color: rgb(238, 233, 97);
+    background-image: url("https://i.pinimg.com/originals/bd/af/76/bdaf7600ad567b8251d9951c5e397420.jpg");
+    background-color: ivory
 }
 
 .container {
     margin: 50px;
     margin-top: 50px
+}
+
+header {
+    background-color: white;
 }
 
 .card {
@@ -16,4 +21,12 @@ body {
 
 #header, h1, h2, h3, p {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+#input-title, #input-body {
+    width: 50%
+}
+
+.form-group {
+    margin: 15px;
 }
