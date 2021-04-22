@@ -39,14 +39,14 @@ const updateBlog = async (event) => {
 
     if (title && post_body) {
         // Send the e-mail and password to the server
-        const response = await fetch(`/api/blog/${id}`, {
+        const response = await fetch(`/api/blogs/${id}`, {
             method: 'PUT',
             body: JSON.stringify({ title, post_body }),
             headers: { 'Content-Type': 'application/json' },
         });
 
         if (response.ok) {
-            document.location.replace(`/blog`);
+            document.location.replace(`/blog/${id}`);
         } else {
             alert('Failed to update the blog.');
         }
