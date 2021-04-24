@@ -16,6 +16,10 @@ BiblioTech is an application where web developers can go to share their frustrat
 
 Users will either log in or create an account using their name, email, and password. From there, they can go to the BiblioTech homepage, and read the work that others have posted. When the user presses "dashboard," they will be brought to their own homepage where they can view/update their previous posts, and write new ones. An "erase" button is present underneath each post, allowing the user to delete previous blog posts. Users can comment on any post.
 
-### Deployed Links
+### Deployed Link
+
+https://evening-reef-25069.herokuapp.com/
 
 ### Screenshots
+
+
