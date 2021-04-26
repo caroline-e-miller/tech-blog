@@ -42,14 +42,18 @@ router.get('/blog/:id', async (req, res) => {
                 },
                 {
                     model: Comment,
-                    attributes: ['comment_body'],
+                    attributes: ['comment_body', 'date_created', 'user_id'],
                 }
             ],
         });
 
         const blog = blogData.get({ plain: true });
         console.log(blog);
-
+        var test = ({
+            ...blog,
+            logged_in: req.session.logged_in
+        });
+        console.log(test.user.name);
         res.render('blog', {
             ...blog,
             logged_in: req.session.logged_in
