@@ -6,6 +6,7 @@ const withAuth = require('../../utils/auth');
 router.post('/', withAuth, async (req, res) => {
     try {
         const newComment = await Comment.create({
+            // takes in all user data in order to avoid anonymous comments
             id: req.params.id,
             comment_body: req.body.comment_body,
             blog_id: req.body.blogId,
