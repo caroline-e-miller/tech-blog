@@ -20,6 +20,7 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        // email must be validated and unique to the user
         email: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -31,9 +32,6 @@ User.init(
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-            // validate: {
-            //     len: [8],
-            // },
         },
     },
     {
