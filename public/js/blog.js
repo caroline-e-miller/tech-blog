@@ -6,9 +6,6 @@ const newComment = async (event) => {
     console.log(event.target);
 
     if (event.target.hasAttribute('blog-id')) {
-        // const id = event.target.getAttribute('form-input');
-
-        // const response = await fetch(`/api/comments/${id}`, {
 
         const response = await fetch(`/api/comments/`, {
             method: 'POST',
@@ -53,22 +50,6 @@ const updateBlog = async (event) => {
     }
 }
 
-// const deleteComment = async (event) => {
-//     if (event.target.hasAttribute('comment-data-id')) {
-//         const id = event.target.getAttribute('comment-data-id');
-
-//         const response = await fetch(`/api/comments/${id}`, {
-//             method: 'DELETE',
-//         });
-
-//         if (response.ok) {
-//             document.location.replace('/blog');
-//         } else {
-//             alert('Failed to erase comment.');
-//         }
-//     }
-// };
-
 document
     .querySelector('.new-comment-form')
     .addEventListener('submit', newComment);
@@ -76,6 +57,3 @@ document
 document
     .querySelector('.edit-btn')
     .addEventListener('click', updateBlog);
-// document
-//     .querySelector('.comment-list')
-//     .addEventListener('click', deleteComment);
